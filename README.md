@@ -1,5 +1,6 @@
 # Selenium Pytest POM Framework
-# Features
+
+## Features
 
 - Page Object Model (POM) implemented for maintainable tests
 - JSON-driven locators and test data
