@@ -1,0 +1,19 @@
+{
+  "CheckoutMobilePage": {
+    "total_tr": {
+      "locator_type": "XPATH",
+      "locator_value": "//table[@class='table table-hover']/tbody/tr",
+      "test_data": null
+    },
+    "bill_price": {
+      "locator_type": "XPATH",
+      "locator_value": "//table[@class='table table-hover']/tbody/tr[last()-1]/td/h3/strong",
+      "test_data": "185000"
+    },
+    "place_order_button": {
+      "locator_type": "XPATH",
+      "locator_value": "//button[@class='btn btn-success']",
+      "test_data": null
+    }
+  }
+}

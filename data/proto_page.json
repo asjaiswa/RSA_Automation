@@ -1,0 +1,61 @@
+{
+  "PromoPage": {
+    "category_link": {
+      "locator_type": "LINK_TEXT",
+      "locator_value": "Category 1",
+      "test_data": null
+    },
+    "name": {
+      "locator_type": "NAME",
+      "locator_value": "name",
+      "test_data": "John Doe"
+    },
+    "email": {
+      "locator_type": "NAME",
+      "locator_value": "email",
+      "test_data": "john@example.com"
+    },
+    "password": {
+      "locator_type": "ID",
+      "locator_value": "exampleInputPassword1",
+      "test_data": "securePass123"
+    },
+    "checkbox": {
+      "locator_type": "ID",
+      "locator_value": "exampleCheck1",
+      "test_data": null
+    },
+    "gender_dropdown": {
+      "locator_type": "ID",
+      "locator_value": "exampleFormControlSelect1",
+      "test_data": "Female"
+    },
+    "employed_radio": {
+      "locator_type": "XPATH",
+      "locator_value": "//*[text()='Employed']",
+      "test_data": null
+    },
+    "dob": {
+      "locator_type": "XPATH",
+      "locator_value": "//input[@class='form-control' and @name='bday']",
+      "test_data": "01-01-1990"
+    },
+    "submit": {
+      "locator_type": "CSS_SELECTOR",
+      "locator_value": "input[value='Submit']",
+      "test_data": null
+    },
+    "success_alert": {
+      "locator_type": "CSS_SELECTOR",
+      "locator_value": ".alert.alert-success.alert-dismissible",
+      "test_data": "Success! The Form has been submitted successfully!."
+    },
+    "test_data": {
+      "username" : "Ashish",
+      "email" : "ashish@gmail.com",
+      "password" : "123456789",
+      "gender_value" : "Male",
+      "dob_value" : "26052000"
+    }
+  }
+}

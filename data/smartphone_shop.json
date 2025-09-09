@@ -1,0 +1,143 @@
+{
+  "LoginPageToShop": {
+    "username": {
+      "locator_type": "ID",
+      "locator_value": "username",
+      "test_data": "rahulshettyacademy"
+    },
+    "password": {
+      "locator_type": "ID",
+      "locator_value": "password",
+      "test_data": "learning"
+    },
+    "user": {
+      "locator_type": "XPATH",
+      "locator_value": "//*[text()=' User']"
+    },
+    "okay_btn": {
+      "locator_type": "ID",
+      "locator_value": "okayBtn"
+    },
+    "terms": {
+      "locator_type": "ID",
+      "locator_value": "terms"
+    },
+    "signin_btn": {
+      "locator_type": "ID",
+      "locator_value": "signInBtn"
+    },
+    "page_title": {
+      "locator_type": "LINK_TEXT",
+      "locator_value": "ProtoCommerce Home"
+    },
+    "incorrect": {
+      "locator_type": "XPATH",
+      "locator_value": "//*[text()='Incorrect']",
+      "test_data_username" : "rahulshettyacademy",
+      "test_data_password" : "123123"
+    }
+  },
+
+  "ProtoCommercePage": {
+    "page_title": {
+      "locator_type": "LINK_TEXT",
+      "locator_value": "ProtoCommerce Home"
+    },
+    "all_phone": {
+      "locator_type": "TAG_NAME",
+      "locator_value": "app-card"
+    },
+    "nav_link_btn": {
+      "locator_type": "XPATH",
+      "locator_value": "//a[@class='nav-link btn btn-primary']"
+    },
+    "test_data": {
+      "phones_to_add": ["iphone X", "Samsung Note 8"],
+      "expected_phone_list": ["iphone X", "Samsung Note 8", "Nokia Edge", "Blackberry"]
+    }
+  },
+
+  "CheckoutMobilePage": {
+    "total_tr": {
+      "locator_type": "XPATH",
+      "locator_value": "//table[@class='table table-hover']/tbody/tr"
+    },
+    "checkout_btn": {
+      "locator_type": "XPATH",
+      "locator_value": "//button[@class='btn btn-success']"
+    },
+    "expected_total": "185000"
+  },
+
+  "AddressMobilePage": {
+    "countries": {
+      "locator_type": "CSS_SELECTOR",
+      "locator_value": "#country",
+      "test_data": "Ind"
+    },
+    "checkbox": {
+      "locator_type": "XPATH",
+      "locator_value": "//div/label[@for='checkbox2']"
+    },
+    "submit": {
+      "locator_type": "XPATH",
+      "locator_value": "//input[@type='submit']"
+    }
+  },
+
+  "PromoPage": {
+    "category_link": {
+      "locator_type": "LINK_TEXT",
+      "locator_value": "Category 1"
+    },
+    "name": {
+      "locator_type": "NAME",
+      "locator_value": "name",
+      "test_data": "John Doe"
+    },
+    "email": {
+      "locator_type": "NAME",
+      "locator_value": "email",
+      "test_data": "john@example.com"
+    },
+    "password": {
+      "locator_type": "ID",
+      "locator_value": "exampleInputPassword1",
+      "test_data": "securePass123"
+    },
+    "checkbox": {
+      "locator_type": "ID",
+      "locator_value": "exampleCheck1"
+    },
+    "gender_dropdown": {
+      "locator_type": "ID",
+      "locator_value": "exampleFormControlSelect1",
+      "test_data": "Female"
+    },
+    "employed_radio": {
+      "locator_type": "XPATH",
+      "locator_value": "//*[text()='Employed']"
+    },
+    "dob": {
+      "locator_type": "XPATH",
+      "locator_value": "//input[@class='form-control' and @name='bday']",
+      "test_data": "01-01-1990"
+    },
+    "submit": {
+      "locator_type": "CSS_SELECTOR",
+      "locator_value": "input[value='Submit']"
+    },
+    "success_alert": {
+      "locator_type": "CSS_SELECTOR",
+      "locator_value": ".alert.alert-success.alert-dismissible",
+      "test_data": "Success! The Form has been submitted successfully!."
+    },
+    "test_data": {
+      "username": "Ashish",
+      "email": "ashish@gmail.com",
+      "password": "123456789",
+      "gender_value": "Male",
+      "dob_value": "26052000"
+    }
+  }
+}

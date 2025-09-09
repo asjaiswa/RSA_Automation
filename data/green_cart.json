@@ -1,0 +1,78 @@
+{
+  "ProductPage": {
+    "product_search": {
+      "locator_type": "CSS_SELECTOR",
+      "locator_value": "input[type='search']",
+      "test_data": "To"
+    },
+    "matched_products": {
+      "locator_type": "XPATH",
+      "locator_value": "//div[@class='product']",
+      "test_data": null
+    },
+    "product_names": {
+      "locator_type": "CSS_SELECTOR",
+      "locator_value": "div [class='product'] h4[class='product-name']",
+      "test_data": null
+    },
+    "cart_icon": {
+      "locator_type": "XPATH",
+      "locator_value": "//img[@alt='Cart']",
+      "test_data": null
+    },
+    "proceed_to_checkout": {
+      "locator_type": "XPATH",
+      "locator_value": "(//div[@class='action-block']/button)[1]",
+      "test_data": null
+    }
+  },
+  "CheckoutPage": {
+    "promo_code_input": {
+      "locator_type": "CSS_SELECTOR",
+      "locator_value": ".promoCode",
+      "test_data": "rahulshettyacademy"
+    },
+    "apply_promo_btn": {
+      "locator_type": "CLASS_NAME",
+      "locator_value": "promoBtn",
+      "test_data": null
+    },
+    "promo_info": {
+      "locator_type": "CSS_SELECTOR",
+      "locator_value": ".promoInfo",
+      "test_data": "Code applied ..!"
+    },
+    "total_amount": {
+      "locator_type": "CLASS_NAME",
+      "locator_value": "totAmt",
+      "test_data": null
+    },
+    "discount_amount": {
+      "locator_type": "CSS_SELECTOR",
+      "locator_value": ".discountAmt",
+      "test_data": null
+    },
+    "place_order_ele": {
+      "locator_type": "XPATH",
+      "locator_value": "//*[text()='Place Order']",
+      "test_data": null
+    }
+  },
+  "OrderPage": {
+    "country_dropdown": {
+      "locator_type": "XPATH",
+      "locator_value": "//div/select",
+      "test_data": "India"
+    },
+    "terms_checkbox": {
+      "locator_type": "CSS_SELECTOR",
+      "locator_value": "input[type='checkbox']",
+      "test_data": null
+    },
+    "proceed_btn": {
+      "locator_type": "XPATH",
+      "locator_value": "//*[text()='Proceed']",
+      "test_data": null
+    }
+  }
+}
