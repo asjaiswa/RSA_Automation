@@ -7,14 +7,6 @@ from selenium.webdriver.chrome.options import Options
 
 from utils.logger import get_logger
 
-# ---------------------------------------------------------
-# Create a timestamped folder for this test run
-# This folder will store logs and HTML report for each run
-# ---------------------------------------------------------
-timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-report_dir = os.path.join("Reports", timestamp)
-os.makedirs(report_dir, exist_ok=True)
-
 
 # ---------------------------------------------------------
 # Configure Pytest to use the timestamped folder
@@ -22,6 +14,8 @@ os.makedirs(report_dir, exist_ok=True)
 # 2. Set HTML report path inside the same folder
 # ---------------------------------------------------------
 def pytest_configure(config):
+    timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+    report_dir = os.path.join("Reports", timestamp)
     config.report_dir = report_dir
     config.option.htmlpath = os.path.join(report_dir, "report.html")
 
