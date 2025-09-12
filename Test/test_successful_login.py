@@ -6,7 +6,7 @@ from Pages.smartphone_shop_login_page import LoginPageToShop
 # 1. Open login page
 # 2. Perform successful login
 # ---------------------------------------------------------
-def test_smartphone_shop_login(setup: webdriver):
+def test_smartphone_shop_successful_login(setup: webdriver):
     driver = setup
 
     # Step 1: Open smartphone shop login page

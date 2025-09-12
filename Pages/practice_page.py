@@ -6,7 +6,11 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.select import Select
 from selenium.webdriver.support.wait import WebDriverWait
 
+from utils.logger import get_logger
 from utils.read_json import load_json, get_locator
+
+# Initialize logger for this class/module
+logger = get_logger(__name__)
 
 class PracticePage:
     def __init__(self, driver):
@@ -16,7 +20,7 @@ class PracticePage:
         # Load locators from JSON file
         self.locators = load_json("data/practice_page.json")
 
-        # Element locators (now directly using get_locator without _get())
+        # Element locators
         self.radio_button = get_locator(self.locators, "PracticePage", "radio_button")
         self.suggestion_box = get_locator(self.locators, "PracticePage", "suggestion_box")
         self.suggestion_results = get_locator(self.locators, "PracticePage", "suggestion_results")
@@ -50,10 +54,6 @@ class PracticePage:
         self.alert_name = self.test_data["name_input"]["test_data"]
         self.total_amount_expected = int(self.test_data["displayed_total_text"]["test_data"])
 
-
-    # Helper method to fetch locator from JSON
-    def _get(self, locator_name):
-        return get_locator(self.locators, "PracticePage", locator_name)
 
     # Scroll to specified Y position
     def scroll(self, length=400):

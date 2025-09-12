@@ -18,7 +18,7 @@ class ProtoCommercePage:
         self.data = load_json("data/smartphone_shop.json")
         logger.info("Loaded locators and test data from smartphone_shop.json")
 
-        # Assign locators from JSON
+        # locators from JSON
         self.page_title = get_locator(self.data, "ProtoCommercePage", "page_title")
         self.all_phone = get_locator(self.data, "ProtoCommercePage", "all_phone")
         self.nav_link_btn = get_locator(self.data, "ProtoCommercePage", "nav_link_btn")

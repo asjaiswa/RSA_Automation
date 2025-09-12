@@ -18,7 +18,7 @@ class ProductPage:
         self.locators = load_json("data/green_cart.json")
         logger.info("Loaded locators from green_cart.json")
 
-        # Element locators (loaded dynamically from JSON)
+        # Element locators (loaded from JSON)
         self.product_search = get_locator(self.locators, "ProductPage", "product_search")
         self.matched_products = get_locator(self.locators, "ProductPage", "matched_products")
         self.product_names = get_locator(self.locators, "ProductPage", "product_names")
