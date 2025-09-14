@@ -1,11 +1,19 @@
+import configparser
 import os
 from datetime import datetime
-
 import pytest
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
+from Pages.smartphone_shop_login_page import LoginPageToShop
 from utils.logger import get_logger
+
+# Read config.ini
+@pytest.fixture(scope="session")
+def config():
+    config = configparser.ConfigParser()
+    config.read("config/config.ini")
+    return config
 
 
 # ---------------------------------------------------------
@@ -53,7 +61,7 @@ def pytest_addoption(parser):
 # 5. Closes browser after test
 # ---------------------------------------------------------
 @pytest.fixture()
-def setup(request):
+def setup(request, config):
     # Get browser name from CLI
     browser = request.config.getoption("--browser_name")
 
@@ -82,6 +90,7 @@ def setup(request):
             "Invalid browser name. Choose from ['Chrome', 'Edge', 'Firefox']"
         )
 
+
     # ----------------------
     # Common driver settings
     # ----------------------
@@ -93,3 +102,11 @@ def setup(request):
 
     # Close browser after test execution
     driver.close()
+
+@pytest.fixture()
+def login(setup, config):
+    url = config["URL"]["login_page"]
+    setup.get(url)
+    login_page = LoginPageToShop(setup)
+    login_page.test_successful_login()
+    return setup

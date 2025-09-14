@@ -8,10 +8,9 @@ from utils.logger import get_logger
 logger = get_logger(__name__)
 
 class LoginPageToShop:
-    def __init__(self, driver):
-        self.driver = driver
+    def __init__(self, setup):
+        self.driver = setup
         self.wait = WebDriverWait(self.driver, 10)
-
         # ------------------------------------------------------
         # Load locators and test data from JSON
         # ------------------------------------------------------
