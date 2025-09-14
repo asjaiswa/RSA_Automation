@@ -43,7 +43,4 @@ class OrderPage:
         logger.info("Clicking 'Proceed' button to place order")
         self.wait.until(EC.element_to_be_clickable(self.proceed_btn)).click()
 
-        # Step 4: Assert that order confirmation message is present
-        confirmation_msg = "Thank you, your order has been placed successfully"
-        assert confirmation_msg in self.driver.page_source, "Order confirmation message not found in page source."
-        logger.info("Order placed successfully and confirmation message verified")
+

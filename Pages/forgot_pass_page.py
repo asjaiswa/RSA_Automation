@@ -11,9 +11,7 @@ class ForgotPage:
         self.driver = driver
         self.wait = WebDriverWait(self.driver, 10)
 
-        # --------------------------
         # Load locators from JSON
-        # --------------------------
         self.locators = load_json("data/forgot_password.json")
         logger.info("Loaded locators from forgot_password.json")
 
